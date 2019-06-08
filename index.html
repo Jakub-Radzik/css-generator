@@ -131,6 +131,67 @@
         <div class="fontCode"></div>
     </div>
 
+    <hr>
+
+    <h1>Border Radius Generator</h1>
+
+    <div class="fourthGenerator">
+        <div class="radiusGenerator">
+            <label for="radius">BORDER RADIUS
+            <input type="range" name="radius" min="0" max="200" value="0" class="slider" onchange="radGen(this)">
+            </label>
+
+            <label for="radius-top-left">BORDER RADIUS TOP-LEFT            
+            <input type="range" name="radius-top-left" min="0" max="200" value="0" class="slider" onchange="radGen(this)">
+            </label>
+            
+            <label for="radius-top-right">BORDER RADIUS TOP-RIGHT
+            <input type="range" name="radius-top-right" min="0" max="200" value="0" class="slider" onchange="radGen(this)">
+            </label>
+
+            <label for="radius-bottom-left">BORDER RADIUS BOTTOM-LEFT
+            <input type="range" name="radius-bottom-left" min="0" max="200" value="0" class="slider" onchange="radGen(this)">
+            </label>
+
+            <label for="radius-bottom-right">BORDER RADIUS BOTTOM-RIGHT
+            <input type="range" name="radius-bottom-right" min="0" max="200" value="0" class="slider" onchange="radGen(this)">
+            </label>
+            
+        </div>
+
+        <div class="radiusResult">
+
+        </div>
+    </div>
+
+    <hr>
+
+    <h1>Box Shadow Generator</h1>
+
+    <div class="fifthGenerator">
+        <div class="shadowGenerator">
+            <label for="horizontal">Horizontal Length
+            <input type="range" name="horizontal" class="slider" onchange="shadGen(this)" min="-200" max="200" value="0">
+            </label>
+
+            <label for="vertical">Vertical Length
+            <input type="range" name="vertical" class="slider" onchange="shadGen(this)" min="-200" max="200" value="0">
+            </label>
+
+            <label for="">Blur Radius
+            <input type="range" name="blur" class="slider" onchange="shadGen(this)" min="0" max="300" value="0">
+            </label>
+
+            <label for="">Spread Radius
+            <input type="range" name="spread" class="slider" onchange="shadGen(this)" min="-200" max="200" value="0">
+            </label>
+        </div>
+
+        <div class="shadowResult">
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,1)
+        </div>
+
+    </div>
 <script src="script.js"></script>
 </body>
 </html>

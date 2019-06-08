@@ -34,7 +34,7 @@ var margin=[0,0,0,0,0],// ALL,TOP,BOTTOM,LEFT,RIGHT
     margins = document.querySelectorAll("input[name*='margin-']");
     paddings = document.querySelectorAll("input[name*='padding-']");
 function margGen(x){
-    console.dir(margins)
+    
     switch(x.name){
         case "margin":
             for(var i=0; i<margin.length; i++)
@@ -128,4 +128,84 @@ function fontGen(){
     document.querySelector(".fontCode").innerHTML=`
     font: ${fontProps[0].value} ${fontProps[1].value} ${fontProps[2].value} ${fontProps[3].value} ${fontProps[4].value}
     `;
+}
+
+//BORDER RADIUS
+
+var radius=[0,0,0,0,0],// ALL,TOP-L, TOP-R, BOTTOM-L, BOTTOM-R
+    
+    display4 = document.querySelector(".radiusResult");
+    radiuses = document.querySelectorAll("input[name*='radius-']");
+
+function radGen(x){
+
+    switch(x.name){
+        case "radius":
+            for(var i=0; i<radius.length; i++)
+            {
+                radius[i]=parseInt(x.value);
+            }
+
+            for(var i=0; i<margins.length; i++){
+                radiuses[i].value=x.value;
+            }
+            
+        break;
+
+        case "radius-top-left":
+            radius[1]=parseInt(x.value);
+        break;
+
+        case "radius-top-right":
+            radius[2]=parseInt(x.value);
+        break;
+
+        case "radius-bottom-left":
+            radius[3]=parseInt(x.value);
+        break;
+
+        case "radius-bottom-right":
+            radius[4]=parseInt(x.value);
+        break;
+        }
+
+        display4.innerHTML=`border-radius: ${radius[1]}px ${radius[2]}px ${radius[4]}px ${radius[3]}px`;
+        display4.style.borderRadius=`${radius[1]}px ${radius[2]}px ${radius[4]}px ${radius[3]}px`;
+}
+
+
+//SHADOW
+
+display5 = document.querySelector(".shadowResult");
+
+var h=0,
+    v=0,
+    b=0,
+    s=0;
+
+function shadGen(x){
+
+
+    switch(x.name){
+        case "horizontal":
+            h=x.value;
+        break;
+
+        case "vertical":
+            v=x.value;
+        break;
+
+        case "blur":
+            b=x.value;
+        break;
+
+        case "spread":
+            s=x.value;
+        break;
+    }
+
+    display5.innerHTML=`box-shadow: ${h}px ${v}px ${b}px ${s}px rgba(0,0,0,1)`;
+    display5.style.boxShadow=`${h}px ${v}px ${b}px ${s}px rgba(0,0,0,1)`;
+
+
 }
