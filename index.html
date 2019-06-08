@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    <h1>Color Generator</h1>
     <div class="firstGenerator">
 
         <div class="colorGenerator">
@@ -26,6 +27,108 @@
         <div class="colorResult">
         </div>
 
+    </div>
+
+    <hr>
+
+    <h1>Margin/Padding Generator</h1>
+    <div class="secondGenerator">
+        <div class="marginGenerator">
+            <label for="margin">MARGIN
+            <input type="range" name="margin" min="0" max="100" value="0" class="slider" onchange="margGen(this)">
+            </label>
+            <label for="margin">MARGIN-TOP
+            <input type="range" name="margin-top" min="0" max="100" value="0" class="slider" onchange="margGen(this)">
+            </label>
+            <label for="margin">MARGIN-BOTTOM
+            <input type="range" name="margin-bottom" min="0" max="100" value="0" class="slider" onchange="margGen(this)">
+            </label>
+            <label for="margin">MARGIN-LEFT
+            <input type="range" name="margin-left" min="0" max="100" value="0" class="slider" onchange="margGen(this)">
+            </label>
+            <label for="margin">MARGIN-RIGHT
+            <input type="range" name="margin-right" min="0" max="100" value="0" class="slider" onchange="margGen(this)">
+            </label>
+
+            <label for="margin">PADDING
+            <input type="range" name="padding" min="0" max="100" value="0" class="slider" onchange="margGen(this)">
+            </label>
+            <label for="margin">PADDING-TOP
+            <input type="range" name="padding-top" min="0" max="100" value="0" class="slider" onchange="margGen(this)">
+            </label>
+            <label for="margin">PADDING-BOTTOM
+            <input type="range" name="padding-bottom" min="0" max="100" value="0" class="slider" onchange="margGen(this)">
+            </label>
+            <label for="margin">PADDING-LEFT
+            <input type="range" name="padding-left" min="0" max="100" value="0" class="slider" onchange="margGen(this)">
+            </label>
+            <label for="margin">PADDING-RIGHT
+            <input type="range" name="padding-right" min="0" max="100" value="0" class="slider" onchange="margGen(this)">
+            </label>
+        </div>
+
+        <div class="group">
+        
+            <div class="text">Margin: 0px 0px 0px 0px</div>
+
+            <div class="field">
+                
+                <div class="marginResult">
+                    Padding: 0px 0px 0px 0px
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+    <!--
+        font:font-style font-variant font-weight font-size font-family;
+
+        font-style: normal|italic|obliquet;
+        font-variant: normal|small-caps;
+        font-weight: normal|bold|bolder|lighter;
+        font-size: number;
+        font-family:
+    -->
+
+
+
+    <h1>Font Generator</h1>
+    <div class="thirdGenerator">
+        <div class="fontGenerator">
+            
+            <select name="font-style" onchange="fontGen()">
+                <option value="normal">Normal</option>
+                <option value="italic">Italic</option>
+                <option value="oblique">Oblique</option>
+            </select>
+
+            <select name="font-variant" onchange="fontGen()">
+                <option value="normal">Normal</option>
+                <option value="small-caps">Small-caps</option>
+            </select>
+
+            <select name="font-weight" onchange="fontGen()">
+                <option value="normal">Normal</option>
+                <option value="bold">Bold</option>
+                <option value="bolder">Bolder</option>
+                <option value="lighter">Lighter</option>
+            </select>
+
+            <input type="number" name="font-size" value="14" onchange="fontGen()" max="72" min="0">
+
+            <select name="font-family" onchange="fontGen()">
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Consolas">Consolas</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+            </select>
+        </div>
+
+        <div class="fontResult">Q W E R T Y U I O P A S D F G H J K L Z X C V B N M q w e r t y u i o p a s d f g h j k l z x c v b n m 1 2 3 4 5  6 7 8 9 0 - = ! @ # $ % ^ & * ( ) _ + [ ] { } ; ' : " , . / < > ? Ą ą Ż ż Ś ś Ź ź Ę ę Ć ć Ń ń Ó ó ` ~</div>
+        <div class="fontCode"></div>
     </div>
 
 <script src="script.js"></script>
