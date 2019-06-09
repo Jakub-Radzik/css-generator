@@ -1,0 +1,36 @@
+
+.fifthGenerator
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shadowGenerator   
+{
+    width: 500px;
+}
+
+@media (max-width: 900px)
+{
+
+    .shadowGenerator
+    {
+        width: 100%;
+    }
+
+}
+
+.shadowResult
+{
+    margin-top: 100px;
+    margin-bottom:300px;
+    height: 200px;
+    width: 200px;
+    border:1px solid black;
+}
+
+.shadowGenerator input:not([name="red"]):not([name="green"]):not([name="blue"]){
+    background-color: rgb(79, 180, 228);
+}
