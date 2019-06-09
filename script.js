@@ -181,7 +181,11 @@ display5 = document.querySelector(".shadowResult");
 var h=0,
     v=0,
     b=0,
-    s=0;
+    s=0,
+    shadowRed = 0,
+    shadowGreen = 0,
+    shadowBlue = 0,
+    shadowOpacity = 1;
 
 function shadGen(x){
 
@@ -202,10 +206,134 @@ function shadGen(x){
         case "spread":
             s=x.value;
         break;
+
+        case "red":
+            shadowRed=x.value;
+        break;
+
+        case "green":
+            shadowGreen=x.value;
+        break;
+
+        case "blue":
+            shadowBlue=x.value;
+        break;
+
+        case "opacity":
+            shadowOpacity/=100;
+            shadowOpacity=x.value;
+        break;
     }
 
-    display5.innerHTML=`box-shadow: ${h}px ${v}px ${b}px ${s}px rgba(0,0,0,1)`;
-    display5.style.boxShadow=`${h}px ${v}px ${b}px ${s}px rgba(0,0,0,1)`;
+    display5.innerHTML=`box-shadow: ${h}px ${v}px ${b}px ${s}px rgba(${shadowRed}, ${shadowGreen}, ${shadowBlue}, ${shadowOpacity})`;
+    display5.style.boxShadow=`${h}px ${v}px ${b}px ${s}px rgba(${shadowRed}, ${shadowGreen}, ${shadowBlue}, ${shadowOpacity} )`;
+
+
+}
+
+
+//BORDER
+
+var border = [1,1,1,1,1], //ALL, TOP, BOTTOM, LEFT, RIGHT
+    typeBorder = ["dotted","dotted","dotted","dotted","dotted"];//ALL, TOP, BOTTOM, LEFT, RIGHT
+    display6 = document.querySelector(".borderResult");
+    display6Text = document.querySelectorAll(".borderText"),
+
+    allNum = document.querySelectorAll('[name="border-width"]');
+    allType =  document.querySelectorAll('[name="type"]');
+    
+
+    function borGen(x){
+
+        if(x.value>10){
+            x.value=10;
+        } else if(x.value<1){
+            x.value=1;
+        }
+
+        
+    switch(x.parentElement.id){
+
+        case "border-all":
+
+            if(x.name=="border-width"){
+                for(var i = 0; i<border.length; i++){
+                    border[i]=x.value;
+                    allNum[i].value=x.value;
+                }
+
+            }else{
+                for(var i = 0; i<typeBorder.length; i++){
+                    typeBorder[i]=x.value;
+                    allType[i].value=x.value;
+                }
+            }
+
+            display6.style.border=`${border[0]}px ${typeBorder[0]} black`;
+            display6Text[0].innerHTML=`border-top: ${border[0]}px ${typeBorder[0]} black;`;
+            display6Text[1].innerHTML=`border-bottom: ${border[1]}px ${typeBorder[1]} black;`;
+            display6Text[2].innerHTML=`border-left: ${border[2]}px ${typeBorder[2]} black;`;
+            display6Text[3].innerHTML=`border-right: ${border[3]}px ${typeBorder[3]} black;`;
+
+        break;
+
+
+        case "border-top":
+        
+            if(x.name=="border-width"){
+                    border[1]=x.value;
+            }else{
+                    typeBorder[1]=x.value;
+            }
+
+            display6.style.borderTop=`${border[1]}px ${typeBorder[1]} black`;
+            display6Text[0].innerHTML=`border-top: ${border[0]}px ${typeBorder[0]} black;`;
+
+        break;
+
+
+        case "border-bottom":
+        
+            if(x.name=="border-width"){
+                    border[2]=x.value;
+            }else{
+                    typeBorder[2]=x.value;
+            }
+
+            display6.style.borderBottom=`${border[2]}px ${typeBorder[2]} black`;
+            display6Text[1].innerHTML=`border-bottom: ${border[1]}px ${typeBorder[1]} black;`;
+            
+        break;
+
+
+        case "border-left":
+        
+            if(x.name=="border-width"){
+                    border[3]=x.value;
+            }else{
+                    typeBorder[3]=x.value;
+            }
+
+            display6.style.borderLeft=`${border[3]}px ${typeBorder[3]} black`;
+            display6Text[2].innerHTML=`border-left: ${border[2]}px ${typeBorder[2]} black;`;
+            
+        break;
+
+
+        case "border-right":
+        
+            if(x.name=="border-width"){
+                    border[4]=x.value;
+            }else{
+                    typeBorder[4]=x.value;
+            }
+
+            display6.style.borderRight=`${border[4]}px ${typeBorder[4]} black`;
+            display6Text[3].innerHTML=`border-right: ${border[3]}px ${typeBorder[3]} black;`;
+        break;
+
+
+    }
 
 
 }
