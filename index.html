@@ -178,20 +178,123 @@
             <input type="range" name="vertical" class="slider" onchange="shadGen(this)" min="-200" max="200" value="0">
             </label>
 
-            <label for="">Blur Radius
+            <label for="blur">Blur Radius
             <input type="range" name="blur" class="slider" onchange="shadGen(this)" min="0" max="300" value="0">
             </label>
 
-            <label for="">Spread Radius
+            <label for="spread">Spread Radius
             <input type="range" name="spread" class="slider" onchange="shadGen(this)" min="-200" max="200" value="0">
             </label>
-        </div>
 
+            <label for="red">RED
+            <input type="range" name="red" class="slider" onchange="shadGen(this)" min="0" max="255" value="0">
+            </label>
+
+            <label for="green">GREEN
+            <input type="range" name="green" class="slider" onchange="shadGen(this)" min="0" max="255" value="0">
+            </label>
+
+            <label for="blue">BLUE
+            <input type="range" name="blue" class="slider" onchange="shadGen(this)" min="0" max="255" value="0">
+            </label>
+
+            <label for="opacity">OPACITY
+            <input type="range" name="opacity" class="slider" onchange="shadGen(this)" min="0" max="100" value="100">
+            </label>
+
+        </div>
         <div class="shadowResult">
             box-shadow: 0px 0px 0px 0px rgba(0,0,0,1)
         </div>
-
     </div>
+
+    <hr>
+
+    <h1>Border Generator</h1>
+
+    <div class="sixthGenerator">
+        <div class="borderGenerator">
+
+            <div id="border-all"><div>ALL</div>
+                <input type="number" name="border-width" min="1" max="10" value="1" onchange="borGen(this)">
+
+                <select name="type" onchange="borGen(this)">
+                    <option value="dotted">Dotted</option>
+                    <option value="dashed">Dashed</option>
+                    <option value="solid">Solid</option>
+                    <option value="double">Double</option>
+                    <option value="groove">Groove</option>
+                    <option value="ridge">Ridge</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+
+            <div id="border-top"><div>TOP</div>
+                <input type="number" name="border-width" min="1" max="10" value="1" onchange="borGen(this)">
+
+                <select name="type" onchange="borGen(this)">
+                    <option value="dotted">Dotted</option>
+                    <option value="dashed">Dashed</option>
+                    <option value="solid">Solid</option>
+                    <option value="double">Double</option>
+                    <option value="groove">Groove</option>
+                    <option value="ridge">Ridge</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+
+            <div id="border-bottom"><div>BOTTOM</div>
+                <input type="number" name="border-width" min="1" max="10" value="1" onchange="borGen(this)">
+
+                <select name="type" onchange="borGen(this)">
+                    <option value="dotted">Dotted</option>
+                    <option value="dashed">Dashed</option>
+                    <option value="solid">Solid</option>
+                    <option value="double">Double</option>
+                    <option value="groove">Groove</option>
+                    <option value="ridge">Ridge</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+            <div id="border-left"><div>LEFT</div>
+                <input type="number" name="border-width" min="1" max="10" value="1" onchange="borGen(this)">
+
+                <select name="type" onchange="borGen(this)">
+                    <option value="dotted">Dotted</option>
+                    <option value="dashed">Dashed</option>
+                    <option value="solid">Solid</option>
+                    <option value="double">Double</option>
+                    <option value="groove">Groove</option>
+                    <option value="ridge">Ridge</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+            
+            <div id="border-right"><div>RIGHT</div>
+                <input type="number" name="border-width" min="1" max="10" value="1" onchange="borGen(this)">
+
+                <select name="type" onchange="borGen(this)">
+                    <option value="dotted">Dotted</option>
+                    <option value="dashed">Dashed</option>
+                    <option value="solid">Solid</option>
+                    <option value="double">Double</option>
+                    <option value="groove">Groove</option>
+                    <option value="ridge">Ridge</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="borderResult">
+            <div class="borderText">border-top: 1px dotted black</div>
+            <div class="borderText">border-bottom: 1px dotted black</div>
+            <div class="borderText">border-left: 1px dotted black</div>
+            <div class="borderText">border-right: 1px dotted black</div>
+        </div>
+    </div>
+
+
 <script src="script.js"></script>
 </body>
 </html>
