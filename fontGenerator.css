@@ -1,0 +1,67 @@
+
+.thirdGenerator
+{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom:100px;
+}
+
+.fontResult
+{
+    overflow: scroll;
+    height: 100px;
+    width: 500px;
+    border: 1px solid gray;
+}
+
+.fontGenerator
+{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 600px) 
+{
+    
+    .fontResult{
+        width: 90%;
+    }
+
+    .fontGenerator
+    {
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+
+    .fontGenerator > *
+    {
+        margin: 10px 0;
+    }
+
+    .fontGenerator option,.fontGenerator  select,.fontGenerator  input
+    {
+        width: 100%;
+    }
+
+}
+
+.fontGenerator select, .fontGenerator input
+{
+    background-color: rgb(205, 172, 235);
+    border-width: 1px;
+}
+
+.fontGenerator option:nth-child(even)
+{
+    background-color: rgb(0, 217, 255);
+}
+
+.fontGenerator option:nth-child(odd)
+{
+    background-color: rgb(0, 110, 255); 
+}
