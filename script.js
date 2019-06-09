@@ -220,7 +220,7 @@ function shadGen(x){
         break;
 
         case "opacity":
-            shadowOpacity/=100;
+            x.value/=100;
             shadowOpacity=x.value;
         break;
     }
