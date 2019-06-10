@@ -185,7 +185,7 @@ var h=0,
     shadowRed = 0,
     shadowGreen = 0,
     shadowBlue = 0,
-    shadowOpacity = 1;
+    shadowOpacity = 1.;
 
 function shadGen(x){
 
@@ -220,8 +220,8 @@ function shadGen(x){
         break;
 
         case "opacity":
-            x.value/=100;
-            shadowOpacity=x.value;
+            shadowOpacity=parseInt(x.value);
+            shadowOpacity/=100;
         break;
     }
 
